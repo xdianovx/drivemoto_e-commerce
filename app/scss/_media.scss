@@ -1,12 +1,21 @@
-* {
+html {
   box-sizing: border-box;
 }
 
-body {
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
+body {
+  color: #2f3035;
+  font-family: 'SFProDisplay', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 
   &:hover {
@@ -23,3 +32,8 @@ li {
   list-style: none;
 }
 
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
