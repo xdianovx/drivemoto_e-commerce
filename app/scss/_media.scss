@@ -17,6 +17,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  display: inline-block;
 
   &:hover {
     text-decoration: none;
@@ -40,4 +41,8 @@ li {
 
 .price {
   font-family: 'Barlow', sans-serif;
+}
+
+header, section {
+  margin-bottom: 80px;
 }
