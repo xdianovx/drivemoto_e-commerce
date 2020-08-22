@@ -20,9 +20,28 @@ $(function () {
     })
 
     $('.product__slider').slick({
-            slidesToShow: 4,
+        slidesToShow: 4,
         slidesToScroll: 1,
         prevArrow: '<button class="product-slider__slider_btn product-slider__slider_btn-left"><img src="img/icons/arr-left-black.svg" alt=""></button>',
         nextArrow: '<button class="product-slider__slider_btn product-slider__slider_btn-right"><img src="img/icons/arr-right-black.svg" alt=""></button>',
     })
+
+
+    $('.filter-style').styler();
+
+
+    $('.aside-filter__item_title-drop').on('click', function () {
+        $(this).toggleClass('active');
+        $(this).next().slideToggle(200);
+    })
+
+
+    $('.price-range').ionRangeSlider({
+        grid: false,
+        type: 'double',
+        from: 200000,
+        to: 300000,
+
+    });
+
 });
