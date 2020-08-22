@@ -1,17 +1,28 @@
 $(function () {
     $('.banner-section__slider').slick({
         dots: true,
-        prevArrow: '<button class="banner-section__slider_btn banner-section__slider_btn-left"><img src="img/icons/arr-left.svg" alt=""></button>\n',
-        nextArrow: '<button class="banner-section__slider_btn banner-section__slider_btn-right"><img src="img/icons/arr-right.svg" alt=""></button>\n',
+        prevArrow: '<button class="banner-section__slider_btn banner-section__slider_btn-left"><img src="img/icons/arr-left.svg" alt=""></button>',
+        nextArrow: '<button class="banner-section__slider_btn banner-section__slider_btn-right"><img src="img/icons/arr-right.svg" alt=""></button>',
     });
 
-    $('.search-tabs__item').on('click', function (e) {
+    $('.tab-switcher').on('click', function (e) {
         e.preventDefault();
-        $('.search-tabs__item').removeClass('active')
-        $('.search-content__item').removeClass('active')
+        $('.tab-switcher').removeClass('active')
+        $('.tab').removeClass('active')
 
         $(this).addClass('active')
         $($(this).attr('href')).addClass('active')
         console.log($($(this).attr('href')));
     });
+
+    $('.product-item__favorite').on('click', function () {
+        $(this).toggleClass('active');
+    })
+
+    $('.product__slider').slick({
+            slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: '<button class="product-slider__slider_btn product-slider__slider_btn-left"><img src="img/icons/arr-left-black.svg" alt=""></button>',
+        nextArrow: '<button class="product-slider__slider_btn product-slider__slider_btn-right"><img src="img/icons/arr-right-black.svg" alt=""></button>',
+    })
 });
