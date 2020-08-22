@@ -7,8 +7,8 @@ $(function () {
 
     $('.tab-switcher').on('click', function (e) {
         e.preventDefault();
-        $('.tab-switcher').removeClass('active')
-        $('.tab').removeClass('active')
+        $($(this).siblings()).removeClass('active')
+        $($(this).parent().siblings().find('div')).removeClass('active')
 
         $(this).addClass('active')
         $($(this).attr('href')).addClass('active')
