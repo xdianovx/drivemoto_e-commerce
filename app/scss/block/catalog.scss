@@ -183,7 +183,7 @@
 
 .aside-filter__item_content-box {
   width: 50%;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .aside-filter__label {
@@ -212,12 +212,12 @@
   width: 8px;
   height: 6px;
   background-image: url('../img/icons/check.svg');
-  margin: 4px 0 0 3px;
+  margin: 3px 0 0 2px;
 }
 
 .jq-checkbox.checked, .jq-radio.checked {
   background: #1C62CD;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .jq-radio.checked .jq-radio__div {
@@ -275,9 +275,15 @@
 .irs--flat .irs-handle.state_hover > i:first-child, .irs--flat .irs-handle:hover > i:first-child {
   background-color: #1C62CD !important;
 }
+
 .irs--flat .irs-handle {
+  top: 22px;
   width: auto;
   height: auto;
+}
+
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+  visibility: hidden !important;
 }
 
 .irs--flat .irs-min, .irs--flat .irs-max {
@@ -318,4 +324,313 @@
     text-decoration: none;
     color: #C4C4C4;
   }
+}
+
+.aside-filter__item-list {
+  margin: 80px 0 40px;
+}
+
+.filter__item-list {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #C4C4C4;
+  margin-top: 26px;
+  padding-left: 26px;
+  padding-bottom: 12px;
+}
+
+.aside-filter__item_title-list {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.filter__item-list_select {
+
+}
+
+.filter__item-list_select {
+  font-family: 'Barlow', sans-serif;
+  line-height: 17px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #48494D;
+  border-radius: 3px;
+}
+
+.jq-selectbox__select {
+  font-family: 'Barlow', sans-serif;
+  height: auto;
+  padding: 0 25px 0 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-weight: 400;
+  font-size: 14px;
+  color: #48494D;
+  text-shadow: none;
+  border: none;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border: none;
+
+}
+
+.jq-selectbox__trigger {
+  position: absolute;
+  border-left: none;
+  transition: all .3s;
+  background-image: url('../img/icons/drop-arrow.svg');
+  width: 12px;
+  top: 13px;
+  bottom: 5px;
+  right: 9px;
+  height: 8px;
+
+}
+
+.jq-selectbox.focused .jq-selectbox__select {
+  border: none;
+}
+
+.jq-selectbox__select:active {
+  box-shadow: none;
+}
+
+.jq-selectbox li.selected {
+  background: rgba(107, 126, 172, 0.05);
+  color: inherit;
+}
+
+.jq-selectbox li:hover {
+  background: rgba(107, 126, 172, 0.05);
+  color: inherit;
+}
+
+.jq-selectbox__dropdown {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 2px 0 0;
+  padding: 8px 0 0px;
+  border: 1px solid #CCC;
+  border-radius: 0px;
+  background: #FFF;
+  box-shadow: none;
+  font: 14px/18px Arial, sans-serif;
+}
+
+.jq-selectbox li {
+  padding: 3px 10px;
+}
+
+.jq-selectbox .placeholder {
+  color: inherit;
+}
+
+.filter-more {
+  width: 100%;
+
+  &__btn {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1C62CD;
+    margin-top: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #1C62CD;
+    cursor: pointer;
+    padding: 0;
+  }
+}
+
+.aside-filter__search {
+  padding: 8px 20px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  border: 1px solid #E0E0E0;
+  font-size: 12px;
+  line-height: 14px;
+  color: #BDBEC2;
+  width: 100%;
+}
+
+.aside-filter__item-tags {
+  .aside-filter__item_content {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .aside-filter__item_content-box {
+    width: auto;
+  }
+
+  .aside-filter__label {
+    position: relative;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+    color: #C4C4C4;
+
+  }
+
+  .jq-checkbox {
+    height: 25px;
+    width: 60px;
+    background: #F0F0F4;
+    border: none;
+    margin: 0;
+
+    &.checked {
+      background: #1C62CD;
+    }
+  }
+
+  .jq-checkbox.checked .jq-checkbox__div {
+    background-image: none;
+  }
+
+  .jq-checkbox.checked {
+    ~ .aside-filter__span {
+      color: #ffffff;
+    }
+  }
+}
+
+.aside-filter__span {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.aside-filter__item_bottom {
+  text-align: center;
+}
+
+.filter__extra_content {
+  display: none;
+  text-align: left;
+}
+
+.filter__extra {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #2F3035;
+  margin-top: 15px;
+  position: relative;
+  padding-right: 29px;
+  display: inline-block;
+  cursor: pointer;
+
+  &:after {
+    position: absolute;
+    content: '';
+    transition: all .3s;
+    background-image: url('../img/icons/drop-arrow.svg');
+    width: 12px;
+    height: 8px;
+    top: 4px;
+    right: 0;
+  }
+
+  &.active:after {
+    transform: rotate(180deg);
+  }
+}
+
+.aside-filter__btn-choose {
+  cursor: pointer;
+  background: #F0F0F4;
+  border: none;
+  padding: 17px 85px;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #BDBEC2;
+  transition: all .3s;
+
+  &:hover {
+    background-color: #1C62CD;
+    color: #ffffff;
+  }
+}
+
+.aside-filter__btn-clear {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin-top: 15px;
+  padding: 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.catalog__filter_btns {
+  display: flex;
+  align-items: center;
+
+  button {
+    width: 23px;
+    height: 27px;
+    outline: none;
+
+    > svg  {
+      opacity: .3;
+      transition: all .3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+
+  }
+}
+
+.catalog__filter_btn.active svg {
+  opacity: 1;
+}
+
+.select-item {
+  .jq-selectbox__select {
+    padding: 8px 46px 8px 20px;
+    border: 1px solid #D7D9DF !important;
+    margin-right: 34px;
+  }
+
+  .jq-selectbox__select-text {
+    font-size: 14px;
+    line-height: 17px;
+    color: #2F3035;
+  }
+
+
+}
+
+
+.product__slider_item.active {
+  width: 100% !important;
+}
+.product-item.active {
+  width: 100% !important;
 }
