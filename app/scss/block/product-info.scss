@@ -1,0 +1,117 @@
+.cart-tab {
+  display: none;
+  margin-bottom: 100px;
+
+  &.active {
+    display: block;
+  }
+}
+
+.cart-tab-switchers {
+  background: #F0F0F4;
+  padding: 22px 0 19px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.cart-tab-switcher {
+  font-size: 20px;
+  line-height: 24px;
+  color: #2F3035;
+  opacity: 0.6;
+  padding-bottom: 5px;
+
+  &.active {
+    opacity: 1;
+    border-bottom: 2px solid #1C62CD;
+  }
+}
+
+.buy-btn.cart-tab-btn {
+  font-size: 13px;
+  line-height: 16px;
+  padding: 10px 40px;
+}
+
+.cart-tab__top {
+  margin-bottom: 50px;
+}
+
+.cart-tab__label {
+  font-size: 17px;
+  line-height: 20px;
+  color: rgba(47, 48, 53, .7);
+}
+
+.cart-tab__input {
+  margin-left: 17px;
+  background: #F0F0F4;
+  border-radius: 3px;
+  border: none;
+  padding: 9px 37px 9px 17px;
+  margin-right: 100px;
+}
+
+.cart-tab__radio {
+  margin-left: 55px;
+  font-size: 17px;
+  line-height: 20px;
+  color: rgba(47, 48, 53, .7);
+}
+
+.cart-tab__list_title {
+  display: flex;
+  //justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cart-tab__title {
+  font-size: 20px;
+  line-height: 24px;
+  color: #2F3035;
+}
+
+.cart-tab__list_item {
+  padding: 20px 0;
+  display: flex;
+  //justify-content: space-between;
+  border-bottom: 1px solid rgba(47, 48, 53, 0.1);
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(47, 48, 53, .7);
+}
+
+.cart-tab{
+  &-address {
+    width: 220px;
+    margin-right: 80px;
+
+  }
+
+  &-workhours {
+    width: 157px;
+    margin-right: 96px;
+    span {
+      display: block;
+    }
+  }
+
+  &-available {
+    width: 140px;
+    margin-right: 60px;
+  }
+
+  &-quantity {
+    width: 104px;
+  }
+
+  &-btn {
+    margin-left: auto;
+  }
+}
+
+.cart-tab-workhours__wrap {
+  display: flex;
+  justify-content: space-between;
+}
